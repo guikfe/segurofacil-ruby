@@ -1,7 +1,9 @@
 require 'segurofacil/version'
 require 'segurofacil/apolice'
+require 'segurofacil/estagiarios'
 
 require 'segurofacil/rest/apolice_create'
+require 'segurofacil/rest/estagiarios_get'
 
 module Segurofacil
 
