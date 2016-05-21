@@ -1,10 +1,13 @@
 require 'segurofacil/rest/estagiario_create'
+require 'segurofacil/rest/estagiario_remove'
 require 'segurofacil/responses/estagiario_create_response'
+require 'segurofacil/responses/estagiario_remove_response'
 
 module Segurofacil
   class Estagiario
 
     extend Segurofacil::REST::EstagiarioCreate
+    extend Segurofacil::REST::EstagiarioRemove
 
     NAME='nome'
     CPF='cPF'
@@ -35,7 +38,12 @@ module Segurofacil
 
       def create(estagiario, cnpj)
         res = super estagiario, cnpj
-        get_response(res)
+        get_create_response(res)
+      end
+
+      def remove(estagiario_cpf, cnpj)
+        res = super estagiario_cpf, cnpj
+        get_remove_response(res)
       end
 
       def convert_to_estagiario(hash)
@@ -49,8 +57,12 @@ module Segurofacil
 
       private
 
-      def get_response(res)
+      def get_create_response(res)
         Segurofacil::Responses::EstagiarioCreateResponse.new(res)
+      end
+
+      def get_remove_response(res)
+        Segurofacil::Responses::EstagiarioRemoveResponse.new(res)
       end
 
     end
