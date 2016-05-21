@@ -44,6 +44,6 @@ The gem is available as open source under the terms of the [MIT License](http://
 - [x] Create Apolice
 - [ ] Cancel Apolice
 - [x] Add Estagiario
-- [ ] Remove Estagiario
+- [x] Remove Estagiario
 - [x] Get Estagiarios
 
