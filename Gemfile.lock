@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    segurofacil-ruby (0.1.2)
+    segurofacil-ruby (0.1.3)
       multi_json
       rest-client
 
