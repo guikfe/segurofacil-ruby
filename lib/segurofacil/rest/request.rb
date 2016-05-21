@@ -10,7 +10,7 @@ module Segurofacil
       DEFAULT_HEADERS = {
         'Content-Type' => 'application/x-www-form-urlencoded',
         'Accept'       => 'application/json',
-        'User-Agent'   => 'segurofacil-ruby/#{Segurofacil::VERSION}'
+        'User-Agent'   => "segurofacil-ruby/#{Segurofacil::VERSION}"
       }
 
       def initialize(path, method, options={})
