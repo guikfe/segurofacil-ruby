@@ -1,5 +1,6 @@
 require 'segurofacil/version'
 require 'segurofacil/apolice'
+require 'segurofacil/estagiario'
 require 'segurofacil/estagiarios'
 
 require 'segurofacil/rest/apolice_create'
