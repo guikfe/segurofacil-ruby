@@ -1,12 +1,12 @@
-require 'segurofacil/rest/request'
-
 module Segurofacil
   module REST
     module ApoliceCreate
 
+      PATH = 'createapolice'
+
       def create(company)
         Segurofacil::REST::Request.post(
-          'createapolice',
+          PATH,
           params: {
             company: company
           }
