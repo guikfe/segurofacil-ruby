@@ -2,9 +2,11 @@ module Segurofacil
   module REST
     module EstagiariosGet
 
-      def get_request(cnpj)
+      PATH = 'getestagiarios'
+
+      def get(cnpj)
         Segurofacil::REST::Request.post(
-          'getestagiarios',
+          PATH,
           params: cnpj
         ).perform
       end

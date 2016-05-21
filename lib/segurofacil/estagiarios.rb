@@ -1,5 +1,6 @@
 require 'segurofacil/rest/estagiarios_get'
 require 'segurofacil/estagiario'
+require 'segurofacil/responses/estagiarios_get_response'
 
 module Segurofacil
   class Estagiarios
@@ -7,17 +8,16 @@ module Segurofacil
     extend Segurofacil::REST::EstagiariosGet
 
     class << self
+
       def get(cnpj)
-        res = get_request(cnpj)
-        res[:estagiarios] = get_estagiarios(res)
-        res
+        res = super({ cnpj: cnpj })
+        get_response(res)
       end
 
       private
 
-      def get_estagiarios(res)
-        return unless res[:code] == 200
-        Estagiario.to_estagiarios(res.fetch(:body))
+      def get_response(res)
+        Segurofacil::Responses::EstagiariosGetResponse.new(res)
       end
 
     end
