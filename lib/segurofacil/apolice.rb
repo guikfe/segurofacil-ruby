@@ -1,11 +1,13 @@
-require 'segurofacil/rest/request'
 require 'segurofacil/rest/apolice_create'
+require 'segurofacil/rest/apolice_cancel'
 require 'segurofacil/responses/apolice_create_response'
+require 'segurofacil/responses/apolice_cancel_response'
 
 module Segurofacil
   class Apolice
 
     extend Segurofacil::REST::ApoliceCreate
+    extend Segurofacil::REST::ApoliceCancel
 
     class << self
 
@@ -32,13 +34,22 @@ module Segurofacil
       #   })
       def create(company)
         res = super company
-        get_response(res)
+        get_create_response(res)
+      end
+
+      def cancel(cnpj)
+        res = super cnpj
+        get_cancel_response(res)
       end
 
       private
 
-      def get_response(res)
+      def get_create_response(res)
         Segurofacil::Responses::ApoliceCreateResponse.new(res)
+      end
+
+      def get_cancel_response(res)
+        Segurofacil::Responses::ApoliceCancelResponse.new(res)
       end
 
     end

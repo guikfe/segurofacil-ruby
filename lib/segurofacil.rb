@@ -3,8 +3,19 @@ require 'segurofacil/apolice'
 require 'segurofacil/estagiario'
 require 'segurofacil/estagiarios'
 
+require 'segurofacil/rest/request'
+require 'segurofacil/rest/apolice_cancel'
 require 'segurofacil/rest/apolice_create'
+require 'segurofacil/rest/estagiario_create'
+require 'segurofacil/rest/estagiario_remove'
 require 'segurofacil/rest/estagiarios_get'
+
+require 'segurofacil/responses/response'
+require 'segurofacil/responses/apolice_cancel_response'
+require 'segurofacil/responses/apolice_create_response'
+require 'segurofacil/responses/estagiario_create_response'
+require 'segurofacil/responses/estagiario_remove_response'
+require 'segurofacil/responses/estagiarios_get_response'
 
 module Segurofacil
 
