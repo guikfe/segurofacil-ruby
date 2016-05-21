@@ -41,6 +41,10 @@ module Segurofacil
         get_create_response(res)
       end
 
+      # Remove a estagiario from the policy
+      # @param estagiario_cpf [String] the estagiario to be removed
+      # @param cnpj [String] the cnpj of the company that holds the estagiario's policy
+      # @return EstagiarioRemoveResponse
       def remove(estagiario_cpf, cnpj)
         res = super estagiario_cpf, cnpj
         get_remove_response(res)
