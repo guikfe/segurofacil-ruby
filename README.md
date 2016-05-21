@@ -42,7 +42,7 @@ The gem is available as open source under the terms of the [MIT License](http://
 ## TODO
 
 - [x] Create Apolice
-- [ ] Cancel Apolice
+- [x] Cancel Apolice
 - [x] Add Estagiario
 - [x] Remove Estagiario
 - [x] Get Estagiarios
