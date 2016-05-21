@@ -1,5 +1,10 @@
+require 'segurofacil/rest/estagiario_create'
+require 'segurofacil/responses/estagiario_create_response'
+
 module Segurofacil
   class Estagiario
+
+    extend Segurofacil::REST::EstagiarioCreate
 
     NAME='nome'
     CPF='cPF'
@@ -28,13 +33,24 @@ module Segurofacil
 
     class << self
 
+      def create(estagiario, cnpj)
+        res = super estagiario, cnpj
+        get_response(res)
+      end
+
       def convert_to_estagiario(hash)
         self.new hash
       end
 
-      def to_estagiarios(list)
+      def ary_to_estagiarios(list)
         return [] if list.nil?
         list.map {|item| convert_to_estagiario(item) }
+      end
+
+      private
+
+      def get_response(res)
+        Segurofacil::Responses::EstagiarioCreateResponse.new(res)
       end
 
     end
