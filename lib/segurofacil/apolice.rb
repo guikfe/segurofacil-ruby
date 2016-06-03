@@ -1,8 +1,3 @@
-require 'segurofacil/rest/apolice_create'
-require 'segurofacil/rest/apolice_cancel'
-require 'segurofacil/responses/apolice_create_response'
-require 'segurofacil/responses/apolice_cancel_response'
-
 module Segurofacil
   class Apolice
 
