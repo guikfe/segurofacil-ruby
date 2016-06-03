@@ -1,5 +1,3 @@
-require 'segurofacil/responses/response'
-
 module Segurofacil
   module Responses
     class EstagiarioCreateResponse < Response

@@ -1,7 +1,3 @@
-require 'segurofacil/rest/estagiarios_get'
-require 'segurofacil/estagiario'
-require 'segurofacil/responses/estagiarios_get_response'
-
 module Segurofacil
   class Estagiarios
 

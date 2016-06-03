@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'segurofacil/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "segurofacil-ruby"
+  spec.name          = "segurofacil"
   spec.version       = Segurofacil::VERSION
   spec.authors       = ["Guilherme"]
   spec.email         = ["guilhermekfe@outlook.com"]

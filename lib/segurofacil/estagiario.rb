@@ -1,8 +1,3 @@
-require 'segurofacil/rest/estagiario_create'
-require 'segurofacil/rest/estagiario_remove'
-require 'segurofacil/responses/estagiario_create_response'
-require 'segurofacil/responses/estagiario_remove_response'
-
 module Segurofacil
   class Estagiario
 
