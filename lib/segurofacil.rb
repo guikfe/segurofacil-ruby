@@ -23,9 +23,9 @@ module Segurofacil
     attr_accessor :api_base, :partner_name, :email, :password
   end
 
-  @api_base     = 'https://www.segurofacil.com.br/parceiros/api'.freeze
-  @partner_name = ENV['SEGUROFACIL_PARTNER_NAME']
-  @email        = ENV['SEGUROFACIL_EMAIL']
-  @password     = ENV['SEGUROFACIL_PASSWORD']
+  self.api_base     = 'https://www.segurofacil.com.br/parceiros/api'.freeze
+  self.partner_name = ENV['SEGUROFACIL_PARTNER_NAME']
+  self.email        = ENV['SEGUROFACIL_EMAIL']
+  self.password     = ENV['SEGUROFACIL_PASSWORD']
 
 end
