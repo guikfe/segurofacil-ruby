@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    segurofacil (0.1.5)
+    segurofacil (0.1.7)
       multi_json
       rest-client
 
