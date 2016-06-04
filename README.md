@@ -6,7 +6,11 @@
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'segurofacil-ruby'
+gem 'segurofacil-ruby', require: false
+```
+
+```ruby
+gem 'segurofacil-ruby', git: 'https://github.com/guilhermekfe/segurofacil-ruby.git', require: false
 ```
 
 And then execute:
@@ -16,6 +20,11 @@ And then execute:
 Or install it yourself as:
 
     $ gem install segurofacil-ruby
+    
+And then create an initializer with that:
+```ruby
+require 'segurofacil'
+```
 
 ## Usage
 
